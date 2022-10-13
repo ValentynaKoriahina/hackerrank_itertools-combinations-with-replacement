@@ -1,0 +1,10 @@
+from itertools import combinations_with_replacement
+
+S, k = input().split()
+S = ''.join(sorted(S))
+k = int(k)
+
+replaced_combinations = list(combinations_with_replacement(S, k))
+
+for element in replaced_combinations:
+    print(*element, sep='')
